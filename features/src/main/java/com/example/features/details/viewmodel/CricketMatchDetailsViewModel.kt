@@ -3,12 +3,12 @@ package com.example.features.details.viewmodel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.common.di.IoDispatcher
 import com.example.domain.result.ApiResult
 import com.example.domain.usecase.GetMatchDetailsUseCase
 import com.example.features.constants.BundleConstant
 import com.example.features.details.intent.CricketDetailsIntent
 import com.example.features.details.viewstate.MatchDetailsViewState
+import com.example.features.di.IoDispatcher
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow

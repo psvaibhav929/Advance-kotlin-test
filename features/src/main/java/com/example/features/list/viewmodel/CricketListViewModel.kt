@@ -2,11 +2,10 @@ package com.example.features.list.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.common.di.IoDispatcher
 import com.example.domain.result.ApiResult
 import com.example.domain.usecase.GetCricketMatchListUseCase
+import com.example.features.di.IoDispatcher
 import com.example.features.list.intent.CricketListIntent
-
 import com.example.features.list.viewstate.CricketListClickState
 import com.example.features.list.viewstate.CricketListViewState
 import dagger.hilt.android.lifecycle.HiltViewModel

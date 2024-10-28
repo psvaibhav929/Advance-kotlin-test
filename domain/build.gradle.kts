@@ -9,7 +9,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":common"))
     implementation(Retrofit.retrofitGson)
     daggerHilt()
     test()

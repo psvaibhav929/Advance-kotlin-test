@@ -10,7 +10,6 @@ android {
 
 dependencies {
     implementation(project(":domain"))
-    implementation(project(":common"))
     implementation(Dep.coreKtx)
     // Retrofit for typesafe API calls
     retrofit()

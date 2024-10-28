@@ -83,7 +83,6 @@ kapt {
 
 dependencies {
 
-    implementation(project(":common"))
     implementation(project(":domain"))
     implementation(project(":data"))
     implementation(project(":features"))
