@@ -49,7 +49,7 @@ class CricketMatchDetailsViewModel @Inject constructor(
                 is ApiResult.Success -> {
                     _matchDetailsState.emit(
                         MatchDetailsViewState.Success(
-                            matchInfo = dogBreedDetails.data.info
+                            matchDetails = dogBreedDetails.data
                         )
                     )
                 }

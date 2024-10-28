@@ -44,15 +44,12 @@ fun MatchDetailsScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         MatchDetailsRow(
-                            "Hits Today", data.matchInfo?.hitsToday.toString()
+                            "Hits Today", data.matchDetails.info.hitsToday.toString()
                         )
-                        Spacer(modifier = Modifier.width(10.dp))
-
                         MatchDetailsRow(
-                            "Hits Used", data.matchInfo?.hitsUsed.toString()
+                            "Hits Used", data.matchDetails.info.hitsUsed.toString()
                         )
-                        Spacer(modifier = Modifier.width(10.dp))
-
+                        
                     }
 
 

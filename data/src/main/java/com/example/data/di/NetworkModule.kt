@@ -1,6 +1,6 @@
 package com.example.data.di
 
-import com.example.data.constant.Constants
+import com.example.data.BuildConfig
 import com.example.data.services.CricketService
 import dagger.Module
 import dagger.Provides
@@ -18,7 +18,7 @@ object NetworkModule {
     @Singleton
     fun provideCricketApi(): CricketService {
         return Retrofit.Builder()
-            .baseUrl(Constants.BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CricketService::class.java)

@@ -1,6 +1,6 @@
 package com.example.data.repository.remote.datasource
 
-import com.example.data.constant.Constants
+import com.example.data.BuildConfig
 import com.example.data.mapper.CricketMatchMapper
 import com.example.data.mapper.MatchDetailsMapper
 import com.example.data.network.SafeApiCall
@@ -17,13 +17,13 @@ class RemoteDataSourceImpl @Inject constructor(
 ) : RemoteDataSource {
     override suspend fun getCricketMatchList(): ApiResult<CricketMatch> {
         return SafeApiCall.call(
-            { service.getAllMatch(Constants.API_KEY) },
+            { service.getAllMatch(BuildConfig.API_KEY) },
             { cricketMatch -> cricketMatchMapper.toDomain(cricketMatch) })
     }
 
     override suspend fun getCricketMatchDetails(matchName: String): ApiResult<MatchDetails> {
         return SafeApiCall.call(
-            { service.getMatchDetails(Constants.API_KEY,matchName) },
+            { service.getMatchDetails(BuildConfig.API_KEY, matchName) },
             { matchDetailsDto -> matchDetailsMapper.toDomain(matchDetailsDto) })
     }
 

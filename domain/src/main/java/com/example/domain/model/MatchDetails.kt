@@ -7,7 +7,7 @@ data class MatchDetails(
     @SerializedName("apikey") var apikey: String? = null,
     @SerializedName("data") var data: ArrayList<MatchDetailsData> = arrayListOf(),
     @SerializedName("status") var status: String? = null,
-    @SerializedName("info") var info: MatchDetailsInfo? = MatchDetailsInfo()
+    @SerializedName("info") var info: MatchDetailsInfo = MatchDetailsInfo()
 )
 
 data class MatchDetailsData(
@@ -27,8 +27,8 @@ data class MatchDetailsData(
 
 data class MatchDetailsInfo(
 
-    @SerializedName("hitsToday") var hitsToday: Int? = null,
-    @SerializedName("hitsUsed") var hitsUsed: Int? = null,
+    @SerializedName("hitsToday") var hitsToday: Int = 0,
+    @SerializedName("hitsUsed") var hitsUsed: Int =0,
     @SerializedName("hitsLimit") var hitsLimit: Int? = null,
     @SerializedName("credits") var credits: Int? = null,
     @SerializedName("server") var server: Int? = null,

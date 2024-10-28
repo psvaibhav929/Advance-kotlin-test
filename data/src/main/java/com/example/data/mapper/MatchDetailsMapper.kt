@@ -16,7 +16,7 @@ class MatchDetailsMapper @Inject constructor() {
             apikey = dto.apikey,
             data = dto.data.map { toMatchDetailsData(it) } as ArrayList<MatchDetailsData>,
             status = dto.status,
-            info = dto.info?.let { toMatchDetailsInfo(it) }
+            info = dto.info.let { toMatchDetailsInfo(it) }
         )
     }
 

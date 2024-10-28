@@ -33,7 +33,7 @@ internal fun MatchDetailsRow(title: String, details: String) {
 
         Text(
             text = details,
-            color = Color.White,
+            color = MaterialTheme.colorScheme.primary,
             fontSize = 24.sp,
             textAlign = TextAlign.Start,
             modifier = Modifier
